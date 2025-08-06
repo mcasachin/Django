@@ -28,12 +28,31 @@ press [CTRL] [BREAK], or [CTRL] [C] to stop the server and you should be back in
 To Create the view app called members- Django creates a folder named members in my project, with this content:
 python manage.py startapp members
 
-No go to folder C:\Users\abc\my_tennis_club\members and open View.py , change the content of it as below
+Django Views 
+Django views are Python functions that take http requests and return http response, like HTML documents.
+A web page that uses Django is full of views with different tasks and missions.
+Views are usually put in a file called views.py located on your app's folde
+
+To create and display view, Need to send a response back to the browser.
+To execute the view, we must call the view via the URL of it.
+
+Example -
+go to folder C:\Users\abc\my_tennis_club\members and open View.py , change the content of it as below
 from django.shortcuts import render
 from django.http import HttpResponse
 
 def members(request):
     return HttpResponse("Hello world!")
+
+Create a file named urls.py in the same folder as the views.py file, and type this code in it:
+from django.urls import path
+from . import views
+urlpatterns = [
+    path('members/', views.members, name='members'),
+]
+
+
+go to folder C:\Users\abc\my_tennis_club\ and open View.py , change the content of it as below
 
 
 
