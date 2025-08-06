@@ -60,6 +60,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
+Run the server again and In the browser window, type 127.0.0.1:8000/members/ in the address bar.
+You will see view displaying Hello world
+
 
 
 
