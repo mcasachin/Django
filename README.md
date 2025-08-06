@@ -51,9 +51,14 @@ urlpatterns = [
     path('members/', views.members, name='members'),
 ]
 
+Now, go to folder C:\Users\abc\my_tennis_club\ and open urls.py , change the content of it as below
+from django.contrib import admin
+from django.urls import include, path
 
-go to folder C:\Users\abc\my_tennis_club\ and open View.py , change the content of it as below
-
+urlpatterns = [
+    path('', include('members.urls')),
+    path('admin/', admin.site.urls),
+]
 
 
 
