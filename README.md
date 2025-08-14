@@ -19,6 +19,9 @@ cd C:\Users\abc\my_tennis_club
 Run The project 
 python manage.py runserver
 
+Note:: To rerun the project , Activate the nevironment using below commnad
+C:\Users\abc>myworld\Scripts\activate.bat
+
 Copy the URL from CMD Logs and open in browser, This will open default view of Django
 http://127.0.0.1:8000/
 
